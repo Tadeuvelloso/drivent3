@@ -73,7 +73,7 @@ describe("GET /payments", () => {
       const token = await generateValidToken(user);
       await createEnrollmentWithAddress(user);
       const ticketType = await createTicketType();
-
+ 
       const otherUser = await createUser();
       const otherUserEnrollment = await createEnrollmentWithAddress(otherUser);
       const ticket = await createTicket(otherUserEnrollment.id, ticketType.id, TicketStatus.RESERVED);
